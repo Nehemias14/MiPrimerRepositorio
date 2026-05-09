@@ -1,0 +1,205 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:linear-gradient(to bottom,#ffd6e7,#fff0f6);
+  min-height:100vh;
+  overflow-x:hidden;
+  font-family:Arial;
+  text-align:center;
+}
+
+/* Pantalla inicial */
+
+.inicio{
+  margin-top:140px;
+}
+
+.flor{
+  font-size:120px;
+  cursor:pointer;
+  animation:flotar 2s infinite ease-in-out;
+}
+
+.texto{
+  margin-top:10px;
+  font-size:25px;
+  color:#8a0045;
+}
+
+@keyframes flotar{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
+}
+
+/* Galería */
+
+.galeria{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+
+  margin-top:40px;
+  padding:20px;
+}
+
+.foto img{
+  width:130px;
+  height:130px;
+
+  object-fit:cover;
+
+  border-radius:20px;
+
+  cursor:pointer;
+
+  transition:0.4s;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.foto img:hover{
+  transform:scale(1.1);
+}
+
+.oculto{
+  display:none;
+}
+
+/* Poema */
+
+.poema{
+
+  margin:30px auto;
+
+  width:85%;
+  max-width:400px;
+
+  background:white;
+
+  padding:20px;
+
+  border-radius:20px;
+
+  font-size:20px;
+
+  color:#70003a;
+
+  box-shadow:0 0 20px rgba(0,0,0,0.15);
+}
+
+/* Easter Egg */
+
+.secreto{
+  position:fixed;
+
+  top:0;
+  right:0;
+
+  width:70px;
+  height:70px;
+}
+
+.mensaje-secreto{
+
+  position:fixed;
+
+  bottom:-300px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:280px;
+
+  background:white;
+
+  padding:20px;
+
+  border-radius:20px;
+
+  font-size:20px;
+
+  color:#8a0045;
+
+  transition:0.7s;
+
+  box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+.mostrar{
+  bottom:50px;
+}
+
+/* Contador */
+
+.contador{
+  margin-top:20px;
+
+  font-size:18px;
+
+  color:#7a003f;
+
+  padding-bottom:50px;
+}
+
+/* Corazones */
+
+.corazones::before{
+
+  content:"❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+
+  position:fixed;
+
+  top:-50px;
+  left:0;
+
+  width:100%;
+
+  animation:caer 10s linear infinite;
+
+  opacity:0.4;
+
+  font-size:25px;
+}
+
+@keyframes caer{
+
+  0%{
+    transform:translateY(-100px);
+  }
+
+  100%{
+    transform:translateY(120vh);
+  }
+
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+  .flor{
+    font-size:100px;
+  }
+
+  .foto img{
+    width:110px;
+    height:110px;
+  }
+
+}
